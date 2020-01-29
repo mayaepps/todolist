@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Divider from '@material-ui/core/Divider';
 
 export default function TodoList({ todos, deleter }) {
   const todoList = todos.length ? (
@@ -12,5 +15,5 @@ export default function TodoList({ todos, deleter }) {
   ) : (
     <p>No todos left</p>
   );
-  return <div>{todoList}</div>;
+  return <List style={{marginTop: 20}}>{todoList}</List>;
 }
