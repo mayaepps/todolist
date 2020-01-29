@@ -1,26 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import TodoList from './TodoList'
 
+export default function App() {
+  const [todos, setTodos] = useState([
+    {id: 1, content: 'go to meeting'},
+    {id: 2, content: 'sleep a lot'},
+  ]);
 
-
-function App() {
+  function deleteTodo(id) {
+    setTodos(todos => todos.filter(todo => todo.if !== id));
+  }
   return (
     <div className="App">
-      <header className="App-header">
-
-        <p>
-          HI! <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Things To Do:
-        </a>
-      </header>
+      <h1>Things To Do</h1>
+      <TodoList todos={todos} />
     </div>
   );
 }
-
-export default App;
