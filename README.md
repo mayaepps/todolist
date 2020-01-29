@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## this is my react app!
+This app is a todo list where you can write down all the things you need to do! 
+
 ## Available Scripts
 
 In the project directory, you can run:
