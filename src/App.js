@@ -8,6 +8,7 @@ export default function App() {
     {id: 2, content: 'sleep a lot'},
   ]);
 
+
   function deleteTodo(id) {
     setTodos(todos => todos.filter(todo => todo.id !== id));
   }
@@ -15,6 +16,7 @@ export default function App() {
   function addTodo(todo) {
     setTodos(todos => [...todos, todo]);
   }
+
 
   return (
     <div className="App">

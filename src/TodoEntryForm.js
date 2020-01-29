@@ -7,6 +7,15 @@ export default function TodoEntryForm( { adder }) {
     adder({ id: Math.random(), content });
     setContent('');
   }
+
+  function submit(e) {
+    e.preventDefault();
+    if (content.trim()) {
+      adder({ id: Math.random(), content });
+    }
+    setContent('');
+  }
+
   return (
     <form onSubmit={submit}>
       <input value={content} onChange={e => setContent(e.target.value)} />
